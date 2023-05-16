@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{7518E784-2CF7-44E4-8AB4-DB0845FC115E}"
+	ProjectSection(SolutionItems) = preProject
+		ERD.vsdx = ERD.vsdx
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CF1D2B0F-46BE-4131-A231-F29C9A8D80D3}
+	EndGlobalSection
+EndGlobal
