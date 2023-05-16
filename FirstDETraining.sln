@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{7518E784-2CF7-44E4-8AB4-DB0845FC115E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D331F940-E388-443F-81FB-9A5F3C81EAB5}"
 	ProjectSection(SolutionItems) = preProject
-		ERD.vsdx = ERD.vsdx
+		Files\ERD.vsdx = Files\ERD.vsdx
 	EndProjectSection
 EndProject
 Global
