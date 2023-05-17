@@ -17,7 +17,7 @@ namespace App.Data
         public System.Guid Id { get; set; }
         public string TextZayavki { get; set; }
         public System.Guid IdAdresa { get; set; }
-        public System.Guid TipZayavki { get; set; }
+        public System.Guid IdTipaZayavki { get; set; }
         public Nullable<System.Guid> IdPolzovatela { get; set; }
     
         public virtual Adresa Adresa { get; set; }

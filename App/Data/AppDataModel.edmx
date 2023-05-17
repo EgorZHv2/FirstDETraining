@@ -44,8 +44,8 @@
           </Key>
           <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
           <Property Name="IdRoli" Type="uniqueidentifier" />
-          <Property Name="Nomer" Type="nchar" MaxLength="10" />
-          <Property Name="Parol" Type="nchar" MaxLength="10" />
+          <Property Name="Nomer" Type="nvarchar" MaxLength="50" />
+          <Property Name="Parol" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="PortiOborudovaniya">
           <Key>
@@ -64,7 +64,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="Nazvanie" Type="nchar" MaxLength="10" />
+          <Property Name="Nazvanie" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="SvoystvaOborudovania">
           <Key>
@@ -97,8 +97,8 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="Nazvanie" Type="nvarchar" MaxLength="50" />
-          <Property Name="CenaZaMesatc" Type="float" />
+          <Property Name="Nazvanie" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CenaZaMesatc" Type="float" Nullable="false" />
         </EntityType>
         <EntityType Name="TarifiAbonentov">
           <Key>
@@ -114,7 +114,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="Imya" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Nazvanie" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="TipiPortov">
           <Key>
@@ -149,7 +149,7 @@
           <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
           <Property Name="TextZayavki" Type="nvarchar" MaxLength="300" Nullable="false" />
           <Property Name="IdAdresa" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="TipZayavki" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="IdTipaZayavki" Type="uniqueidentifier" Nullable="false" />
           <Property Name="IdPolzovatela" Type="uniqueidentifier" />
         </EntityType>
         <EntityType Name="ZnacheniyaSvoystvOborudovania">
@@ -350,7 +350,7 @@
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="Zayavki">
-              <PropertyRef Name="TipZayavki" />
+              <PropertyRef Name="IdTipaZayavki" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -552,8 +552,8 @@
           </Key>
           <Property Name="Id" Type="Guid" Nullable="false" />
           <Property Name="IdRoli" Type="Guid" />
-          <Property Name="Nomer" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="Parol" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Nomer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Parol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Abonenti" Relationship="Self.FK_Abonenti_Polzovateli" FromRole="Polzovateli" ToRole="Abonenti" />
           <NavigationProperty Name="RoliPolzovateley" Relationship="Self.FK_Polzovateli_RoliPolzovateley" FromRole="Polzovateli" ToRole="RoliPolzovateley" />
           <NavigationProperty Name="Zayavki" Relationship="Self.FK_Zayavki_Polzovateli" FromRole="Polzovateli" ToRole="Zayavki" />
@@ -578,7 +578,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Guid" Nullable="false" />
-          <Property Name="Nazvanie" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Nazvanie" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Polzovateli" Relationship="Self.FK_Polzovateli_RoliPolzovateley" FromRole="RoliPolzovateley" ToRole="Polzovateli" />
         </EntityType>
         <EntityType Name="SvoystvaOborudovania">
@@ -607,8 +607,8 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Guid" Nullable="false" />
-          <Property Name="Nazvanie" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="CenaZaMesatc" Type="Double" />
+          <Property Name="Nazvanie" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CenaZaMesatc" Type="Double" Nullable="false" />
           <NavigationProperty Name="TarifiAbonentov" Relationship="Self.FK_TarifiAbonentov_Tarifi" FromRole="Tarifi" ToRole="TarifiAbonentov" />
         </EntityType>
         <EntityType Name="TarifiAbonentov">
@@ -627,7 +627,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Guid" Nullable="false" />
-          <Property Name="Imya" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Nazvanie" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Oborudovanie" Relationship="Self.FK_Oborudovanie_TipiOborudovania1" FromRole="TipiOborudovania" ToRole="Oborudovanie" />
           <NavigationProperty Name="SvoystvaOborudovania" Relationship="Self.SvoystvaTipovOborudovaniya" FromRole="TipiOborudovania" ToRole="SvoystvaOborudovania" />
         </EntityType>
@@ -668,7 +668,7 @@
           <Property Name="Id" Type="Guid" Nullable="false" />
           <Property Name="TextZayavki" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="IdAdresa" Type="Guid" Nullable="false" />
-          <Property Name="TipZayavki" Type="Guid" Nullable="false" />
+          <Property Name="IdTipaZayavki" Type="Guid" Nullable="false" />
           <Property Name="IdPolzovatela" Type="Guid" />
           <NavigationProperty Name="Adresa" Relationship="Self.FK_Zayavki_Adresa" FromRole="Zayavki" ToRole="Adresa" />
           <NavigationProperty Name="Polzovateli" Relationship="Self.FK_Zayavki_Polzovateli" FromRole="Zayavki" ToRole="Polzovateli" />
@@ -900,7 +900,7 @@
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="Zayavki">
-              <PropertyRef Name="TipZayavki" />
+              <PropertyRef Name="IdTipaZayavki" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1114,7 +1114,7 @@
             <EntityTypeMapping TypeName="st2_Zholobov_FirstActivi1Model.TipiOborudovania">
               <MappingFragment StoreEntitySet="TipiOborudovania">
                 <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Imya" ColumnName="Imya" />
+                <ScalarProperty Name="Nazvanie" ColumnName="Nazvanie" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1153,7 +1153,7 @@
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="TextZayavki" ColumnName="TextZayavki" />
                 <ScalarProperty Name="IdAdresa" ColumnName="IdAdresa" />
-                <ScalarProperty Name="TipZayavki" ColumnName="TipZayavki" />
+                <ScalarProperty Name="IdTipaZayavki" ColumnName="IdTipaZayavki" />
                 <ScalarProperty Name="IdPolzovatela" ColumnName="IdPolzovatela" />
               </MappingFragment>
             </EntityTypeMapping>

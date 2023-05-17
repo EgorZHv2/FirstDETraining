@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D331F940-E388-443F-81FB-9A5F3C81EAB5}"
 	ProjectSection(SolutionItems) = preProject
 		Files\ERD.vsdx = Files\ERD.vsdx
+		Files\Словарь БД.xlsx = Files\Словарь БД.xlsx
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App", "App\App.csproj", "{196F5C37-2793-4214-9FDE-344549AD3786}"

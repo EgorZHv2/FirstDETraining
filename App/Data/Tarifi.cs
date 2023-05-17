@@ -22,7 +22,7 @@ namespace App.Data
     
         public System.Guid Id { get; set; }
         public string Nazvanie { get; set; }
-        public Nullable<double> CenaZaMesatc { get; set; }
+        public double CenaZaMesatc { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TarifiAbonentov> TarifiAbonentov { get; set; }
