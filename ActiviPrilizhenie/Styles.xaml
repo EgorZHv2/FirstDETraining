@@ -2,16 +2,56 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Style x:Key="LoginButton" TargetType="Button">
         <Setter Property="Background" Value="LightGray"></Setter>
+        <Setter Property="FontWeight" Value="Bold"></Setter>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border Background="{TemplateBinding Background}" CornerRadius="5" Height="30" Padding="5" MinWidth="100">
-                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center">
-
+                    <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="1" Margin="10" CornerRadius="5" Height="30" Padding="5">
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" >
+                           
                         </ContentPresenter>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+    </Style>
+    <Style x:Key="LoginFieldName" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="20"></Setter>
+        <Setter Property="Margin" Value="0,5,0,5"></Setter>
+    </Style>
+    <Style x:Key="LoginField" TargetType="TextBox">
+        <Setter Property="FontSize" Value="20"></Setter>
+        <Setter Property="Margin" Value="0,5,0,5"></Setter>
+    </Style>
+    <Style x:Key="LoginPasswodField" TargetType="PasswordBox">
+        <Setter Property="FontSize" Value="20"></Setter>
+        <Setter Property="Margin" Value="0,5,0,5"></Setter>
+    </Style>
+
+    <Style x:Key="ReloadButton" TargetType="Button">
+        <Setter Property="Background">
+            <Setter.Value>
+                <ImageBrush ImageSource="/Resources/Images/CodeReload.jpg"></ImageBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="BtBorder" Background="{TemplateBinding Background}"  Height="30" Width="30">
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center">
+
+                        </ContentPresenter>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="BtBorder" Property="BorderBrush" Value="Gray"></Setter>
+                            <Setter TargetName="BtBorder" Property="BorderThickness" Value="1"></Setter>
+                            <Setter TargetName="BtBorder" Property="CornerRadius" Value="3"></Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+       
     </Style>
 </ResourceDictionary>

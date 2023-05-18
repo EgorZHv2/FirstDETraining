@@ -200,6 +200,7 @@
       <DependentUpon>ApplicationModel.edmx</DependentUpon>
       <LastGenOutput>ApplicationModel.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\Images\CodeReload.jpg" />
     <Resource Include="Resources\Images\Logo.PNG" />
   </ItemGroup>
   <ItemGroup>

@@ -19,9 +19,43 @@
             <RowDefinition Height="2*"></RowDefinition>
         </Grid.RowDefinitions>
         <Image VerticalAlignment="Top" Source="\Resources\Images\Logo.PNG" Grid.Column="2"></Image>
-        <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1">
+        <StackPanel  Grid.Column="1" Grid.Row="1">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition MinWidth="80"></ColumnDefinition>
+                <ColumnDefinition MinWidth="200" Width="4*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0">
+                <TextBlock Style="{StaticResource LoginFieldName}">Номер</TextBlock>
+                <TextBlock Style="{StaticResource LoginFieldName}">Пароль</TextBlock>
+                <TextBlock Style="{StaticResource LoginFieldName}">Код</TextBlock>
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+                <TextBox Style="{StaticResource LoginField}"></TextBox>
+                <PasswordBox Style="{StaticResource LoginPasswodField}"></PasswordBox>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                            <ColumnDefinition MaxWidth="70"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBox   Style="{StaticResource LoginField}"></TextBox>
+                        <Button Grid.Column="1" Style="{StaticResource ReloadButton}"></Button>
+                    </Grid>
+                        
+                    
+                </StackPanel>
+        </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Style="{StaticResource LoginButton}">Отмена</Button>
+                <Button  Grid.Column="1" Style="{StaticResource LoginButton}">Вход</Button>
+            </Grid>
 
         </StackPanel>
+        <TextBlock Grid.ColumnSpan="2" VerticalAlignment="Center" FontSize="40" Margin="30,0,0,0">Телеком Нева Связь</TextBlock>
     </Grid>
 
 </Page>
