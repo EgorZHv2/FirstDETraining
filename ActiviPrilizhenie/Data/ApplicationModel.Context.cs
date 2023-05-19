@@ -15,11 +15,19 @@ namespace ActiviPrilizhenie.Data
     
     public partial class st2_Zholobov_FirstActivi1Entities : DbContext
     {
+        private static st2_Zholobov_FirstActivi1Entities Context { get; set; }
         public st2_Zholobov_FirstActivi1Entities()
             : base("name=st2_Zholobov_FirstActivi1Entities")
         {
         }
-    
+        public static st2_Zholobov_FirstActivi1Entities GetContext()
+        {
+            if(Context == null)
+            {
+                Context = new st2_Zholobov_FirstActivi1Entities();
+            }
+            return Context;
+        }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
