@@ -53,7 +53,7 @@
                 <Button Click="AbortButton_Click" Name="AbortButton" Style="{StaticResource LoginButton}">Отмена</Button>
                 <Button Click="EnterButton_Click" Name="EnterButton" Visibility="Collapsed" IsEnabled="False" Grid.Column="1" Style="{StaticResource LoginButton}">Вход</Button>
             </Grid>
-
+            <Button x:Name="skip" Click="skip_Click">Dev кнопка пропустит этап</Button>
         </StackPanel>
         <TextBlock Grid.ColumnSpan="2" VerticalAlignment="Center" FontSize="40" Margin="30,0,0,0">Телеком Нева Связь</TextBlock>
     </Grid>

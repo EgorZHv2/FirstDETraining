@@ -10,22 +10,38 @@ namespace ActiviPrilizhenie
 {
     public class NavigationHelper
     {
-        private static Page CurrentPage { get; set; }
+        private static Page CurrentMainPage { get; set; }
+        private static Page CurrentMenuPage { get; set; }
         public delegate void NavigationDelegate();
-        private static event NavigationDelegate PageChanged;
+        private static event NavigationDelegate MainPageChanged;
+        private static event NavigationDelegate MenuPageChanged;
 
-        public static void ChangePage(Page page)
+        public static void ChangeMainPage(Page page)
         {
-            CurrentPage = page;
-            PageChanged();
+            CurrentMainPage = page;
+            MainPageChanged();
         }
-        public static void AddPageChangedEventHandler(NavigationDelegate handler)
+        public static void AddMainPageChangedEventHandler(NavigationDelegate handler)
         {
-            PageChanged += handler;
+            MainPageChanged += handler;
         }
-        public static Page GetCurrentPage()
+        public static Page GetCurrentMainPage()
         {
-            return CurrentPage;
+            return CurrentMainPage;
+        }
+
+        public static void ChangeMenuPage(Page page)
+        {
+            CurrentMenuPage = page;
+            MenuPageChanged();
+        }
+        public static void AddMenuPageChangedEventHandler(NavigationDelegate handler)
+        {
+            MenuPageChanged += handler;
+        }
+        public static Page GetCurrentMenuPage()
+        {
+            return CurrentMenuPage;
         }
     }
 }

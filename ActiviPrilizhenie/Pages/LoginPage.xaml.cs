@@ -39,7 +39,7 @@ namespace ActiviPrilizhenie.Pages
             if (e.Key == Key.Enter)
             {
                 var login = LoginBox.Text.Trim();
-                var user = st2_Zholobov_FirstActivi1Entities
+                var user = ApplicationContext
                     .GetContext()
                     .Polzovateli.FirstOrDefault(en => en.Nomer == login);
                 if (user != null)
@@ -107,7 +107,7 @@ namespace ActiviPrilizhenie.Pages
         private void EnterButton_Click(object sender, RoutedEventArgs e) 
         {
           var login = LoginBox.Text.Trim();
-                var user = st2_Zholobov_FirstActivi1Entities
+                var user = ApplicationContext
                     .GetContext()
                     .Polzovateli.FirstOrDefault(en => en.Nomer == login);
                 if (user == null)
@@ -132,7 +132,7 @@ namespace ActiviPrilizhenie.Pages
                                     MessageBox.Show("Код неактуален");
                                     return;
                                 }
-                                MessageBox.Show("Успех");
+                            NavigationHelper.ChangeMainPage(new MenuPage());
                                 return;
                             }
                             else
@@ -177,6 +177,11 @@ namespace ActiviPrilizhenie.Pages
             CodeActual = false;
            
 
+        }
+
+        private void skip_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationHelper.ChangeMainPage(new MenuPage());
         }
     }
 }

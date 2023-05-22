@@ -1,5 +1,4 @@
-﻿using ActiviPrilizhenie.Pages;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,23 +13,22 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ActiviPrilizhenie
+namespace ActiviPrilizhenie.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for MenuPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MenuPage : Page
     {
-        public MainWindow()
+        public MenuPage()
         {
             InitializeComponent();
-            NavigationHelper.AddMainPageChangedEventHandler(ChangePageHandler);
-            NavigationHelper.ChangeMainPage(new LoginPage());
-           
+            NavigationHelper.AddMenuPageChangedEventHandler(ChangePageHandler);
+            NavigationHelper.ChangeMenuPage(new NewsPage());
         }
         public void ChangePageHandler()
         {
-            MainFrame.Content = NavigationHelper.GetCurrentMainPage();
+            MenuFrame.Content = NavigationHelper.GetCurrentMenuPage();
         }
     }
 }

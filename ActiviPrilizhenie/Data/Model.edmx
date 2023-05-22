@@ -30,6 +30,14 @@
           <Property Name="Dolgota" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Shirota" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <EntityType Name="Novosti">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Data" Type="date" Nullable="false" />
+          <Property Name="Text" Type="nvarchar" MaxLength="500" Nullable="false" />
+        </EntityType>
         <EntityType Name="Oborudovanie">
           <Key>
             <PropertyRef Name="Id" />
@@ -405,6 +413,7 @@
         <EntityContainer Name="st2_Zholobov_FirstActivi1ModelStoreContainer">
           <EntitySet Name="Abonenti" EntityType="Self.Abonenti" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Adresa" EntityType="Self.Adresa" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Novosti" EntityType="Self.Novosti" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Oborudovanie" EntityType="Self.Oborudovanie" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Polzovateli" EntityType="Self.Polzovateli" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PortiOborudovaniya" EntityType="Self.PortiOborudovaniya" Schema="dbo" store:Type="Tables" />
@@ -532,6 +541,14 @@
           <Property Name="Shirota" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="UstanovlennoeOborudovanie" Relationship="Self.FK_Oborudovanie_Adresa" FromRole="Adresa" ToRole="UstanovlennoeOborudovanie" />
           <NavigationProperty Name="Zayavki" Relationship="Self.FK_Zayavki_Adresa" FromRole="Adresa" ToRole="Zayavki" />
+        </EntityType>
+        <EntityType Name="Novosti">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Data" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Text" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
         <EntityType Name="Oborudovanie">
           <Key>
@@ -908,9 +925,10 @@
           <End Role="SvoystvaOborudovania" Type="Self.SvoystvaOborudovania" Multiplicity="*" />
           <End Role="TipiOborudovania" Type="Self.TipiOborudovania" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="st2_Zholobov_FirstActivi1Entities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="ApplicationContext" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Abonenti" EntityType="Self.Abonenti" />
           <EntitySet Name="Adresa" EntityType="Self.Adresa" />
+          <EntitySet Name="Novosti" EntityType="Self.Novosti" />
           <EntitySet Name="Oborudovanie" EntityType="Self.Oborudovanie" />
           <EntitySet Name="Polzovateli" EntityType="Self.Polzovateli" />
           <EntitySet Name="PortiOborudovaniya" EntityType="Self.PortiOborudovaniya" />
@@ -1004,7 +1022,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="st2_Zholobov_FirstActivi1ModelStoreContainer" CdmEntityContainer="st2_Zholobov_FirstActivi1Entities">
+        <EntityContainerMapping StorageEntityContainer="st2_Zholobov_FirstActivi1ModelStoreContainer" CdmEntityContainer="ApplicationContext">
           <EntitySetMapping Name="Abonenti">
             <EntityTypeMapping TypeName="st2_Zholobov_FirstActivi1Model.Abonenti">
               <MappingFragment StoreEntitySet="Abonenti">
@@ -1029,6 +1047,15 @@
                 <ScalarProperty Name="Dom" ColumnName="Dom" />
                 <ScalarProperty Name="Dolgota" ColumnName="Dolgota" />
                 <ScalarProperty Name="Shirota" ColumnName="Shirota" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Novosti">
+            <EntityTypeMapping TypeName="st2_Zholobov_FirstActivi1Model.Novosti">
+              <MappingFragment StoreEntitySet="Novosti">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="Text" ColumnName="Text" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -64,6 +64,82 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Data\Abonenti.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Adresa.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Novosti.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Oborudovanie.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Polzovateli.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PortiOborudovaniya.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\RoliPolzovateley.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SvoystvaOborudovania.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\sysdiagrams.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Tarifi.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TarifiAbonentov.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TipiOborudovania.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TipiPortov.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TipiZayavok.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\UstanovlennoeOborudovanie.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Zayavki.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ZnacheniyaSvoystvOborudovania.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ZnacheniyaSvoystvOborudovaniyaVMassive.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NewsOutputModel.cs" />
+    <Compile Include="Pages\MenuPage.xaml.cs">
+      <DependentUpon>MenuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\NewsPage.xaml.cs">
+      <DependentUpon>NewsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\LoginCodeModalWindow.xaml.cs">
       <DependentUpon>LoginCodeModalWindow.xaml</DependentUpon>
     </Compile>
@@ -75,77 +151,19 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Data\Abonenti.cs">
-      <DependentUpon>ApplicationModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\Adresa.cs">
-      <DependentUpon>ApplicationModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\ApplicationModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ApplicationModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\ApplicationModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ApplicationModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\ApplicationModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ApplicationModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Data\Oborudovanie.cs">
-      <DependentUpon>ApplicationModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\Polzovateli.cs">
-      <DependentUpon>ApplicationModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\PortiOborudovaniya.cs">
-      <DependentUpon>ApplicationModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\RoliPolzovateley.cs">
-      <DependentUpon>ApplicationModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\SvoystvaOborudovania.cs">
-      <DependentUpon>ApplicationModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\sysdiagrams.cs">
-      <DependentUpon>ApplicationModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\Tarifi.cs">
-      <DependentUpon>ApplicationModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\TarifiAbonentov.cs">
-      <DependentUpon>ApplicationModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\TipiOborudovania.cs">
-      <DependentUpon>ApplicationModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\TipiPortov.cs">
-      <DependentUpon>ApplicationModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\TipiZayavok.cs">
-      <DependentUpon>ApplicationModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\UstanovlennoeOborudovanie.cs">
-      <DependentUpon>ApplicationModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\Zayavki.cs">
-      <DependentUpon>ApplicationModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\ZnacheniyaSvoystvOborudovania.cs">
-      <DependentUpon>ApplicationModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\ZnacheniyaSvoystvOborudovaniyaVMassive.cs">
-      <DependentUpon>ApplicationModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Pages\LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MenuPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\NewsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -180,12 +198,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="Data\ApplicationModel.edmx">
+    <EntityDeploy Include="Data\Model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ApplicationModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Data\ApplicationModel.edmx.diagram">
-      <DependentUpon>ApplicationModel.edmx</DependentUpon>
+    <None Include="Data\Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -197,22 +215,23 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Data\ApplicationModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ApplicationModel.Context.cs</LastGenOutput>
-      <DependentUpon>ApplicationModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="Data\ApplicationModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ApplicationModel.edmx</DependentUpon>
-      <LastGenOutput>ApplicationModel.cs</LastGenOutput>
-    </Content>
     <Resource Include="Resources\Images\CodeReload.jpg" />
     <Resource Include="Resources\Images\Logo.PNG" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Data\Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

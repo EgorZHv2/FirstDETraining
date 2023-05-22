@@ -13,20 +13,21 @@ namespace ActiviPrilizhenie.Data
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class st2_Zholobov_FirstActivi1Entities : DbContext
+    public partial class ApplicationContext : DbContext
     {
-        private static st2_Zholobov_FirstActivi1Entities Context { get; set; }
-        public st2_Zholobov_FirstActivi1Entities()
-            : base("name=st2_Zholobov_FirstActivi1Entities")
+        private static ApplicationContext context;
+        public ApplicationContext()
+            : base("name=ApplicationContext")
         {
         }
-        public static st2_Zholobov_FirstActivi1Entities GetContext()
+    
+        public static ApplicationContext GetContext()
         {
-            if(Context == null)
+            if(context == null)
             {
-                Context = new st2_Zholobov_FirstActivi1Entities();
+                context = new ApplicationContext();
             }
-            return Context;
+            return context;
         }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -35,6 +36,7 @@ namespace ActiviPrilizhenie.Data
     
         public virtual DbSet<Abonenti> Abonenti { get; set; }
         public virtual DbSet<Adresa> Adresa { get; set; }
+        public virtual DbSet<Novosti> Novosti { get; set; }
         public virtual DbSet<Oborudovanie> Oborudovanie { get; set; }
         public virtual DbSet<Polzovateli> Polzovateli { get; set; }
         public virtual DbSet<PortiOborudovaniya> PortiOborudovaniya { get; set; }
