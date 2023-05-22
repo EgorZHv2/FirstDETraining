@@ -23,6 +23,7 @@ namespace ActiviPrilizhenie.Data
         public System.Guid Id { get; set; }
         public string Nazvanie { get; set; }
         public double CenaZaMesatc { get; set; }
+        public string Opisanie { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TarifiAbonentov> TarifiAbonentov { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ActiviPrilizhenie.Models
 {
-    public class NewsOutputModel
+    public class NovostiOutputModel
     {
         public string Date { get; set; }
         public string Text { get; set; }

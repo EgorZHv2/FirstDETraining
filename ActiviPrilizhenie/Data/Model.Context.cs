@@ -15,7 +15,7 @@ namespace ActiviPrilizhenie.Data
     
     public partial class ApplicationContext : DbContext
     {
-        private static ApplicationContext context;
+       private static ApplicationContext context;
         public ApplicationContext()
             : base("name=ApplicationContext")
         {
@@ -29,6 +29,7 @@ namespace ActiviPrilizhenie.Data
             }
             return context;
         }
+    
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

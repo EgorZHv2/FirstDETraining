@@ -10,16 +10,18 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <Border BorderBrush="Black" BorderThickness="0,0,0,1">
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Style="{StaticResource MenuButton}">Новости</Button>
-            <Button Style="{StaticResource MenuButton}">Тарифы</Button>
+            <Button Name="ToNews" Click="ToNews_Click" Style="{StaticResource MenuButton}">Новости</Button>
+            <Button Name="ToTarifs" Click="ToTarifs_Click" Style="{StaticResource MenuButton}">Тарифы</Button>
             <Button Style="{StaticResource MenuButton}">Заявки</Button>
             <Button Style="{StaticResource MenuButton}">Оплата</Button>
             <Button Style="{StaticResource MenuButton}">Оборудование</Button>
+                <Button   Style="{StaticResource MenuButton}">
+                    <TextBlock>Установленное <LineBreak></LineBreak> оборудование</TextBlock></Button>
             </StackPanel>
         </Border>
 

@@ -30,5 +30,15 @@ namespace ActiviPrilizhenie.Pages
         {
             MenuFrame.Content = NavigationHelper.GetCurrentMenuPage();
         }
+
+        private void ToNews_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationHelper.ChangeMenuPage(new NewsPage());
+        }
+
+        private void ToTarifs_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationHelper.ChangeMenuPage(new TarifiPage());
+        }
     }
 }

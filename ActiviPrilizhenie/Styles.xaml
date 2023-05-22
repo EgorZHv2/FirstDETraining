@@ -27,7 +27,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="1" Margin="10" CornerRadius="5" MinWidth="100" Height="30" Padding="5">
+                    <Border Background="{TemplateBinding Background}" VerticalAlignment="Center" HorizontalAlignment="Center" BorderBrush="Black" BorderThickness="1" Margin="10" CornerRadius="5" MinWidth="80" MinHeight="30" Padding="5">
                         <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" >
 
                         </ContentPresenter>
@@ -87,5 +87,24 @@
         <Setter Property="FontFamily" Value="Comic Sans MC"></Setter>
         <Setter Property="FontWeight" Value="Heavy"></Setter>
     </Style>
-    
+    <Style x:Key="ListBoxButton" TargetType="Button">
+        <Setter Property="Background" Value="LightGray"></Setter>
+        <Setter Property="FontWeight" Value="Bold"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" VerticalAlignment="Center" HorizontalAlignment="Center" BorderBrush="Black" BorderThickness="1" Margin="10" CornerRadius="5" MinWidth="80" MinHeight="30" Padding="5">
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" >
+
+                        </ContentPresenter>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="WhiteSmoke"></Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>

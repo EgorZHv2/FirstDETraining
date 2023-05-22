@@ -18,25 +18,27 @@ using System.Windows.Shapes;
 namespace ActiviPrilizhenie.Pages
 {
     /// <summary>
-    /// Interaction logic for NewsPage.xaml
+    /// Interaction logic for TarifiPage.xaml
     /// </summary>
-    public partial class NewsPage : Page
+    public partial class TarifiPage : Page
     {
-        private List<NovostiOutputModel> News = new List<NovostiOutputModel>();
-        public NewsPage()
+        private List<TarifiOutputModel> Tarifis = new List<TarifiOutputModel>();
+        public TarifiPage()
         {
             InitializeComponent();
-            var dbNews = ApplicationContext.GetContext().Novosti.ToList();
-            foreach(var item in dbNews) 
+            var dBTarifi = ApplicationContext.GetContext().Tarifi.ToList();
+            foreach(var item in dBTarifi)
             {
-                News.Add(new NovostiOutputModel
+                Tarifis.Add(new TarifiOutputModel
                 {
-                    Date = item.Data.ToShortDateString(),
-                    Text = item.Text
+                    Id = item.Id,
+                    Cost = item.CenaZaMesatc,
+                    Name = item.Nazvanie,
+                    Opisanie = item.Opisanie
                 });
             }
-            NewsList.ItemsSource = News;
-            NewsList.Items.Refresh();
+            TarifisList.ItemsSource = Tarifis;
+            TarifisList.Items.Refresh();
         }
     }
 }

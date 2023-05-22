@@ -4,25 +4,25 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="3a52296813674e70892484bdabf9f18b" Name="Diagram1">
-        <EntityTypeShape EntityType="st2_Zholobov_FirstActivi1Model.Abonenti" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="st2_Zholobov_FirstActivi1Model.Adresa" Width="1.5" PointX="8.25" PointY="16.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="st2_Zholobov_FirstActivi1Model.Novosti" Width="1.5" PointX="9.75" PointY="2.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="st2_Zholobov_FirstActivi1Model.Oborudovanie" Width="1.5" PointX="5.25" PointY="8.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="st2_Zholobov_FirstActivi1Model.Polzovateli" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="st2_Zholobov_FirstActivi1Model.PortiOborudovaniya" Width="1.5" PointX="7.5" PointY="7.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="st2_Zholobov_FirstActivi1Model.RoliPolzovateley" Width="1.5" PointX="0.75" PointY="4.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="st2_Zholobov_FirstActivi1Model.SvoystvaOborudovania" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="st2_Zholobov_FirstActivi1Model.sysdiagrams" Width="1.5" PointX="0.75" PointY="11.25" IsExpanded="true" />
+      <Diagram DiagramId="5d5b9fa887944d93ad549d036abdb095" Name="Diagram1">
+        <EntityTypeShape EntityType="st2_Zholobov_FirstActivi1Model.Abonenti" Width="1.5" PointX="5.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="st2_Zholobov_FirstActivi1Model.Adresa" Width="1.5" PointX="8.25" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="st2_Zholobov_FirstActivi1Model.Novosti" Width="1.5" PointX="9.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="st2_Zholobov_FirstActivi1Model.Oborudovanie" Width="1.5" PointX="5.25" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="st2_Zholobov_FirstActivi1Model.Polzovateli" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="st2_Zholobov_FirstActivi1Model.PortiOborudovaniya" Width="1.5" PointX="7.5" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="st2_Zholobov_FirstActivi1Model.RoliPolzovateley" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="st2_Zholobov_FirstActivi1Model.SvoystvaOborudovania" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="st2_Zholobov_FirstActivi1Model.sysdiagrams" Width="1.5" PointX="0.75" PointY="11" IsExpanded="true" />
         <EntityTypeShape EntityType="st2_Zholobov_FirstActivi1Model.Tarifi" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="st2_Zholobov_FirstActivi1Model.TarifiAbonentov" Width="1.5" PointX="7.5" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="st2_Zholobov_FirstActivi1Model.TipiOborudovania" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="st2_Zholobov_FirstActivi1Model.TipiPortov" Width="1.5" PointX="5.25" PointY="12.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="st2_Zholobov_FirstActivi1Model.TipiZayavok" Width="1.5" PointX="8.25" PointY="21.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="st2_Zholobov_FirstActivi1Model.UstanovlennoeOborudovanie" Width="1.5" PointX="10.5" PointY="8" IsExpanded="true" />
-        <EntityTypeShape EntityType="st2_Zholobov_FirstActivi1Model.Zayavki" Width="1.5" PointX="10.5" PointY="11.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="st2_Zholobov_FirstActivi1Model.ZnacheniyaSvoystvOborudovania" Width="1.5" PointX="7.5" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="st2_Zholobov_FirstActivi1Model.ZnacheniyaSvoystvOborudovaniyaVMassive" Width="1.5" PointX="7.5" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="st2_Zholobov_FirstActivi1Model.TarifiAbonentov" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="st2_Zholobov_FirstActivi1Model.TipiOborudovania" Width="1.5" PointX="3" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="st2_Zholobov_FirstActivi1Model.TipiPortov" Width="1.5" PointX="5.25" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="st2_Zholobov_FirstActivi1Model.TipiZayavok" Width="1.5" PointX="8.25" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="st2_Zholobov_FirstActivi1Model.UstanovlennoeOborudovanie" Width="1.5" PointX="10.5" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="st2_Zholobov_FirstActivi1Model.Zayavki" Width="1.5" PointX="10.5" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="st2_Zholobov_FirstActivi1Model.ZnacheniyaSvoystvOborudovania" Width="1.5" PointX="7.5" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="st2_Zholobov_FirstActivi1Model.ZnacheniyaSvoystvOborudovaniyaVMassive" Width="1.5" PointX="7.5" PointY="11.875" IsExpanded="true" />
         <AssociationConnector Association="st2_Zholobov_FirstActivi1Model.FK_Abonenti_Polzovateli" ManuallyRouted="false" />
         <AssociationConnector Association="st2_Zholobov_FirstActivi1Model.FK_PortiOborudovaniya_Abonenti" ManuallyRouted="false" />
         <AssociationConnector Association="st2_Zholobov_FirstActivi1Model.FK_TarifiAbonentov_Abonenti" ManuallyRouted="false" />

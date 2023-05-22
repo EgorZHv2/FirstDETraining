@@ -133,13 +133,18 @@
     <Compile Include="Data\ZnacheniyaSvoystvOborudovaniyaVMassive.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\NewsOutputModel.cs" />
+    <Compile Include="Models\NovostiOutputModel.cs" />
+    <Compile Include="Models\TarifiOutputModel.cs" />
     <Compile Include="Pages\MenuPage.xaml.cs">
       <DependentUpon>MenuPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\NewsPage.xaml.cs">
       <DependentUpon>NewsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\TarifiPage.xaml.cs">
+      <DependentUpon>TarifiPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserData.cs" />
     <Compile Include="Windows\LoginCodeModalWindow.xaml.cs">
       <DependentUpon>LoginCodeModalWindow.xaml</DependentUpon>
     </Compile>
@@ -164,6 +169,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\NewsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\TarifiPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

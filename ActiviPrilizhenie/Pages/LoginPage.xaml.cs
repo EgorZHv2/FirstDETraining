@@ -34,7 +34,7 @@ namespace ActiviPrilizhenie.Pages
             MainGrid.KeyDown += new KeyEventHandler(Enter_KeyDown);
         }
 
-        private  void Enter_KeyDown(object sender, KeyEventArgs e)
+        private void Enter_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
             {
@@ -60,10 +60,9 @@ namespace ActiviPrilizhenie.Pages
                         CodeBox.Opacity = 1.0;
                         EnterButton.Visibility = Visibility.Visible;
                         EnterButton.IsEnabled = true;
-                        
+
                         if (!string.IsNullOrEmpty(CodeBox.Text))
                         {
-                            
                             if (CodeBox.Text == Code)
                             {
                                 if (!CodeActual)
@@ -71,7 +70,19 @@ namespace ActiviPrilizhenie.Pages
                                     MessageBox.Show("Код неактуален");
                                     return;
                                 }
-                                MessageBox.Show("Успех");
+                                var role = ApplicationContext
+                                    .GetContext()
+                                    .RoliPolzovateley.Find(user.IdRoli);
+                                if (role.Nazvanie == "Abonent")
+                                {
+                                    UserData.Role = UserRole.Abonent;
+                                }
+                                if (role.Nazvanie == "Operator")
+                                {
+                                    UserData.Role = UserRole.Operator;
+                                }
+                                UserData.UserId = user.Id;
+                                NavigationHelper.ChangeMainPage(new MenuPage());
                                 return;
                             }
                             else
@@ -97,58 +108,66 @@ namespace ActiviPrilizhenie.Pages
             }
         }
 
-        private void AbortButton_Click(object sender, RoutedEventArgs e) 
+        private void AbortButton_Click(object sender, RoutedEventArgs e)
         {
             LoginBox.Text = string.Empty;
             CodeBox.Text = string.Empty;
             PasswordBox.Password = string.Empty;
         }
 
-        private void EnterButton_Click(object sender, RoutedEventArgs e) 
+        private void EnterButton_Click(object sender, RoutedEventArgs e)
         {
-          var login = LoginBox.Text.Trim();
-                var user = ApplicationContext
-                    .GetContext()
-                    .Polzovateli.FirstOrDefault(en => en.Nomer == login);
-                if (user == null)
+            var login = LoginBox.Text.Trim();
+            var user = ApplicationContext
+                .GetContext()
+                .Polzovateli.FirstOrDefault(en => en.Nomer == login);
+            if (user == null)
+            {
+                MessageBox.Show("Пользователь не найден");
+                return;
+            }
+
+            if (!string.IsNullOrEmpty(PasswordBox.Password))
+            {
+                if (user.Parol == PasswordBox.Password)
                 {
-                   MessageBox.Show("Пользователь не найден");
+                    if (!string.IsNullOrEmpty(CodeBox.Text))
+                    {
+                        if (CodeBox.Text == Code)
+                        {
+                            if (!CodeActual)
+                            {
+                                MessageBox.Show("Код неактуален");
+                                return;
+                            }
+                            var role = ApplicationContext
+                                .GetContext()
+                                .RoliPolzovateley.Find(user.IdRoli);
+                            if (role.Nazvanie == "Abonent")
+                            {
+                                UserData.Role = UserRole.Abonent;
+                            }
+                            if (role.Nazvanie == "Operator")
+                            {
+                                UserData.Role = UserRole.Operator;
+                            }
+                            UserData.UserId = user.Id;
+                            NavigationHelper.ChangeMainPage(new MenuPage());
+                            return;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Неверный код");
+                            return;
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Неверный пароль");
                     return;
                 }
-               
-                if (!string.IsNullOrEmpty(PasswordBox.Password))
-                {
-                    if (user.Parol == PasswordBox.Password)
-                    {
-                       
-                        
-                        if (!string.IsNullOrEmpty(CodeBox.Text))
-                        {
-                            
-                            if (CodeBox.Text == Code)
-                            {
-                                if (!CodeActual)
-                                {
-                                    MessageBox.Show("Код неактуален");
-                                    return;
-                                }
-                            NavigationHelper.ChangeMainPage(new MenuPage());
-                                return;
-                            }
-                            else
-                            {
-                                MessageBox.Show("Неверный код");
-                                return;
-                            }
-                        }
-                       
-                    }
-                    else
-                    {
-                        MessageBox.Show("Неверный пароль");
-                        return;
-                    }
-                }
+            }
         }
 
         private string GenerateCode(int length)
@@ -159,7 +178,7 @@ namespace ActiviPrilizhenie.Pages
             {
                 result.Append(rnd.Next(0, 10).ToString());
             }
-           
+
             return result.ToString();
         }
 
@@ -170,13 +189,12 @@ namespace ActiviPrilizhenie.Pages
             modal.ShowDialog();
             CodeTimer();
         }
+
         private async Task CodeTimer()
         {
             CodeActual = true;
             await Task.Delay(10000);
             CodeActual = false;
-           
-
         }
 
         private void skip_Click(object sender, RoutedEventArgs e)
