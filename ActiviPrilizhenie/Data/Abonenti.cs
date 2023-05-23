@@ -18,7 +18,6 @@ namespace ActiviPrilizhenie.Data
         public Abonenti()
         {
             this.PortiOborudovaniya = new HashSet<PortiOborudovaniya>();
-            this.TarifiAbonentov = new HashSet<TarifiAbonentov>();
         }
     
         public System.Guid Id { get; set; }
@@ -31,7 +30,6 @@ namespace ActiviPrilizhenie.Data
         public virtual Polzovateli Polzovateli { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PortiOborudovaniya> PortiOborudovaniya { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TarifiAbonentov> TarifiAbonentov { get; set; }
+        public virtual TarifiAbonentov TarifiAbonentov { get; set; }
     }
 }

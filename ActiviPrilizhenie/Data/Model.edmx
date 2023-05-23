@@ -112,7 +112,6 @@
         <EntityType Name="TarifiAbonentov">
           <Key>
             <PropertyRef Name="IdAbonenta" />
-            <PropertyRef Name="IdTarifa" />
           </Key>
           <Property Name="IdAbonenta" Type="uniqueidentifier" Nullable="false" />
           <Property Name="IdTarifa" Type="uniqueidentifier" Nullable="false" />
@@ -293,7 +292,7 @@
         </Association>
         <Association Name="FK_TarifiAbonentov_Abonenti">
           <End Role="Abonenti" Type="Self.Abonenti" Multiplicity="1" />
-          <End Role="TarifiAbonentov" Type="Self.TarifiAbonentov" Multiplicity="*" />
+          <End Role="TarifiAbonentov" Type="Self.TarifiAbonentov" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="Abonenti">
               <PropertyRef Name="Id" />
@@ -633,7 +632,6 @@
         <EntityType Name="TarifiAbonentov">
           <Key>
             <PropertyRef Name="IdAbonenta" />
-            <PropertyRef Name="IdTarifa" />
           </Key>
           <Property Name="IdAbonenta" Type="Guid" Nullable="false" />
           <Property Name="IdTarifa" Type="Guid" Nullable="false" />
@@ -745,7 +743,7 @@
         </Association>
         <Association Name="FK_TarifiAbonentov_Abonenti">
           <End Role="Abonenti" Type="Self.Abonenti" Multiplicity="1" />
-          <End Role="TarifiAbonentov" Type="Self.TarifiAbonentov" Multiplicity="*" />
+          <End Role="TarifiAbonentov" Type="Self.TarifiAbonentov" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="Abonenti">
               <PropertyRef Name="Id" />

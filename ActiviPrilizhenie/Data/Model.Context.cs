@@ -15,21 +15,18 @@ namespace ActiviPrilizhenie.Data
     
     public partial class ApplicationContext : DbContext
     {
-       private static ApplicationContext context;
+        private static ApplicationContext Context;
         public ApplicationContext()
             : base("name=ApplicationContext")
         {
         }
-    
+        
         public static ApplicationContext GetContext()
         {
-            if(context == null)
-            {
-                context = new ApplicationContext();
-            }
-            return context;
+            if (Context == null)
+                Context = new ApplicationContext();
+            return Context;
         }
-    
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

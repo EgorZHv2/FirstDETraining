@@ -199,6 +199,8 @@ namespace ActiviPrilizhenie.Pages
 
         private void skip_Click(object sender, RoutedEventArgs e)
         {
+            UserData.Role = UserRole.Operator;
+            UserData.UserId = new Guid("4D3AC389-C7A0-45A2-960B-CB5BEBF06D9D");
             NavigationHelper.ChangeMainPage(new MenuPage());
         }
     }

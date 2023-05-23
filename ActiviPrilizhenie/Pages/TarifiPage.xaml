@@ -15,7 +15,7 @@
             <RowDefinition Height="50"></RowDefinition>
         </Grid.RowDefinitions>
         <TextBlock Style="{StaticResource PageName}">Тарифы компании</TextBlock>
-        <ListBox ScrollViewer.HorizontalScrollBarVisibility="Disabled" x:Name="TarifisList"  Grid.Row="1">
+        <ListBox Loaded="TarifisList_Loaded" ScrollViewer.HorizontalScrollBarVisibility="Disabled" x:Name="TarifisList"  Grid.Row="1">
             <ListBox.ItemContainerStyle>
                 <Style TargetType="ListBoxItem">
                     <Setter Property="HorizontalAlignment" Value="Stretch"/>
@@ -41,9 +41,8 @@
                             </StackPanel>
                             <TextBlock   TextWrapping="WrapWithOverflow"  FontSize="10" Text="{Binding Opisanie}"></TextBlock>
                         </StackPanel>
-                        <StackPanel Grid.Column="1" Orientation="Horizontal">
-                            <Button Style="{StaticResource ListBoxButton}">Редактировать</Button>
-                            <Button Style="{StaticResource ListBoxButton}">Удалить</Button>
+                        <StackPanel Grid.Column="1" HorizontalAlignment="Center" Orientation="Horizontal">
+                          <Button Click="Subscribe_Click" x:Name="SubscribeBT"   Style="{StaticResource ListBoxButton}">Подписаться</Button>
                         </StackPanel>
                     </Grid>
                 </DataTemplate>
