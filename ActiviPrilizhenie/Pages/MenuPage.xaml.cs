@@ -23,6 +23,24 @@ namespace ActiviPrilizhenie.Pages
         public MenuPage()
         {
             InitializeComponent();
+            if(UserData.Role == UserRole.Operator) 
+            {
+                DobavitZayavku.Visibility= Visibility.Collapsed;
+                Zayavki.Visibility = Visibility.Visible;
+                  OplataBt.Visibility = Visibility.Collapsed;
+            }
+           else  if(UserData.Role == UserRole.Abonent) 
+            {
+                DobavitZayavku.Visibility= Visibility.Visible;
+                Zayavki.Visibility = Visibility.Collapsed;
+                OplataBt.Visibility = Visibility.Visible;
+            }
+            else if(UserData.Role == UserRole.None) 
+            {
+                DobavitZayavku.Visibility= Visibility.Visible;
+                Zayavki.Visibility = Visibility.Collapsed;
+                  OplataBt.Visibility = Visibility.Collapsed;
+            }
             NavigationHelper.AddMenuPageChangedEventHandler(ChangePageHandler);
             NavigationHelper.ChangeMenuPage(new NewsPage());
         }
@@ -39,6 +57,16 @@ namespace ActiviPrilizhenie.Pages
         private void ToTarifs_Click(object sender, RoutedEventArgs e)
         {
             NavigationHelper.ChangeMenuPage(new TarifiPage());
+        }
+
+        private void DobavitZayavku_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationHelper.ChangeMenuPage(new AddZayavkaPage());
+        }
+
+        private void OplataBt_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationHelper.ChangeMenuPage(new OplataPage());
         }
     }
 }

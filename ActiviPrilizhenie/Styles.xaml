@@ -43,15 +43,18 @@
     </Style>
     <Style x:Key="LoginFieldName" TargetType="TextBlock">
         <Setter Property="FontSize" Value="20"></Setter>
+        <Setter Property="Height" Value="25"></Setter>
         <Setter Property="Margin" Value="0,5,0,5"></Setter>
     </Style>
     <Style x:Key="LoginField" TargetType="TextBox">
         <Setter Property="FontSize" Value="20"></Setter>
         <Setter Property="Margin" Value="0,5,0,5"></Setter>
+        <Setter Property="Height" Value="25"></Setter>
     </Style>
     <Style x:Key="LoginPasswodField" TargetType="PasswordBox">
         <Setter Property="FontSize" Value="20"></Setter>
         <Setter Property="Margin" Value="0,5,0,5"></Setter>
+        <Setter Property="Height" Value="25"></Setter>
     </Style>
 
     <Style x:Key="ReloadButton" TargetType="Button">

@@ -17,10 +17,11 @@
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
             <Button Name="ToNews" Click="ToNews_Click" Style="{StaticResource MenuButton}">Новости</Button>
             <Button Name="ToTarifs" Click="ToTarifs_Click" Style="{StaticResource MenuButton}">Тарифы</Button>
-            <Button Style="{StaticResource MenuButton}">Заявки</Button>
-            <Button Style="{StaticResource MenuButton}">Оплата</Button>
-            <Button Style="{StaticResource MenuButton}">Оборудование</Button>
-                <Button   Style="{StaticResource MenuButton}">
+            <Button Visibility="Collapsed" Name="Zayavki" Style="{StaticResource MenuButton}">Заявки</Button>
+            <Button Name="DobavitZayavku" Click="DobavitZayavku_Click" Style="{StaticResource MenuButton}">Добавить заявку</Button>
+                <Button Name="OplataBt" Click="OplataBt_Click" Style="{StaticResource MenuButton}">Оплата</Button>
+            <Button  Visibility="Collapsed" Style="{StaticResource MenuButton}">Оборудование</Button>
+            <Button  Visibility="Collapsed" Style="{StaticResource MenuButton}">
                     <TextBlock>Установленное <LineBreak></LineBreak> оборудование</TextBlock></Button>
             </StackPanel>
         </Border>
