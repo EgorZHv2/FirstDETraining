@@ -44,10 +44,10 @@ namespace ActiviPrilizhenie.Pages
             var tarifabonenta = ApplicationContext.GetContext().TarifiAbonentov.FirstOrDefault(ee => ee.IdAbonenta == abonent.Id);
             var tarif = ApplicationContext.GetContext().Tarifi.FirstOrDefault(ee => ee.Id == tarifabonenta.IdTarifa);
             XFont font = new XFont("Calibri", 20, XFontStyle.Regular);
-            gfx.DrawString("Квитанция:",font,XBrushes.Black,0,10);
-            gfx.DrawString("Абонент: " + abonent.Familia + " " + abonent.Imya,font,XBrushes.Black,0,30);
-            gfx.DrawString("Тариф: " + tarif.Nazvanie,font,XBrushes.Black,0,50);
-            gfx.DrawString("Стоимость: " + tarif.CenaZaMesatc,font,XBrushes.Black,0,70);
+            gfx.DrawString("Квитанция:",font,XBrushes.Black,0,20);
+            gfx.DrawString("Абонент: " + abonent.Familia + " " + abonent.Imya,font,XBrushes.Black,0,40);
+            gfx.DrawString("Тариф: " + tarif.Nazvanie,font,XBrushes.Black,0,60);
+            gfx.DrawString("Стоимость: " + tarif.CenaZaMesatc,font,XBrushes.Black,0,80);
             document.Save(filepath);
         }
     }
